@@ -1,104 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Democratic Students of Youth Federation of St. Michael’s School (DSYFS)</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSYFS - Rise to the Future</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
     header {
-      background: #d9534f;
-      color: #fff;
-      padding: 20px 0;
+      background-color: #d9534f;
+      padding: 30px 20px;
       text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #fff;
     }
 
     nav {
-      background: #333;
-      color: #fff;
+      display: flex;
+      justify-content: center;
+      background: #1e1e1e;
       padding: 10px 0;
-      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d9534f;
     }
 
     .container {
-      padding: 20px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1.5s ease-in;
     }
 
     .about, .blog {
-      margin: 20px 0;
-      padding: 15px;
-      background: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      animation: slideUp 1s ease;
+    }
+
+    .about h2, .blog h2 {
+      color: #ff5757;
+      margin-bottom: 15px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
     }
 
     .footer {
       text-align: center;
-      padding: 20px 0;
-      background: #333;
-      color: #fff;
+      padding: 30px;
+      background: #1e1e1e;
+      color: #ccc;
+      margin-top: 30px;
     }
 
-    /* 🎯 Animation for logo */
-    @keyframes swingIn {
-      0% {
-        transform: rotate(90deg);
-        opacity: 0;
-      }
-      60% {
-        transform: rotate(-20deg);
-        opacity: 1;
-      }
-      80% {
-        transform: rotate(10deg);
-      }
-      100% {
-        transform: rotate(0deg);
-      }
-    }
-
-    .logo-animation {
-      animation: swingIn 2s ease-out;
+    .logo-swing {
+      width: 150px;
+      animation: swing 2s ease-in-out;
       display: block;
       margin: 20px auto;
     }
 
-    .welcome-box {
-      background: #fff3cd;
-      border: 1px solid #ffeeba;
-      padding: 15px;
-      margin: 20px auto;
-      max-width: 600px;
-      border-radius: 8px;
+    .tips {
       text-align: center;
-      color: #856404;
-      font-weight: bold;
-      animation: fadeIn 2s ease-in-out 2s forwards;
-      opacity: 0;
+      background: #ff5757;
+      color: #fff;
+      padding: 15px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
-    .post img {
-      border-radius: 10px;
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes swing {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(15deg); }
+      50% { transform: rotate(-15deg); }
+      75% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
     }
   </style>
 </head>
@@ -114,47 +141,45 @@
   </nav>
 
   <div class="container">
+    <div class="tips">
+      💡 Welcome to DSYFS — United for Justice, Peace, and Progress. "Rise to the Future."
+    </div>
+
+    <img class="logo-swing" src="https://i.ibb.co/SX80CPdY/d072eda9-7927-4408-87da-626a907701cc.png" alt="DSYFS Logo" />
+
     <div class="about" id="about">
-      <img src="https://i.ibb.co/SX80CPdY/d072eda9-7927-4408-87da-626a907701cc.png" alt="DSYFS Logo" width="150" class="logo-animation">
-
-      <div class="welcome-box">
-        🔔 Welcome to DSYFS – a student-led movement for peace, equality, education & justice! 📚✊
-      </div>
-
       <h2>About Us</h2>
-      <p>Democratic Students of Youth Federation of St. Michael’s School (DSYFS) is a student-led union founded on the principles of justice, equality, and unity. We are committed to creating a safe, peaceful, and progressive environment where every student—regardless of gender, caste, or religion—is treated equally and empowered to rise.</p>
-
-      <h3>Our Mission is Clear:</h3>
+      <p>DSYFS is a student-led union founded on the principles of justice, equality, and unity. We work to create a safe, peaceful, and progressive school environment where every student—regardless of gender, caste, or religion—is empowered to rise.</p>
       <ul>
-        <li>🔴 To protect students from exploitation</li>
-        <li>⚖️ To fight against injustice peacefully</li>
-        <li>⚡ To uphold secularism and equal rights for all</li>
-        <li>📚 To promote the importance of education</li>
-        <li>🕊️ To build a respectful, helping, and inclusive student community</li>
+        <li>🔴 Protect students from exploitation</li>
+        <li>⚖️ Fight injustice peacefully</li>
+        <li>⚡ Promote secularism and equality</li>
+        <li>📚 Value education and knowledge sharing</li>
+        <li>🕊️ Foster a respectful and inclusive community</li>
       </ul>
-
-      <p>We believe in action over words, peace over conflict, and unity over division. By respecting our teachers and standing up for what's right, we build a future where every voice is heard.</p>
-      <p><strong>"Rise to the Future" — not just a slogan, but our guiding call to shape a better tomorrow.</strong></p>
+      <p><strong>“Rise to the Future” — not just a slogan, but our mission.</strong></p>
     </div>
 
     <div class="blog" id="blog">
       <h2>Blog</h2>
-
       <div class="post">
         <h3>📚 DSYFS Students Shine in Class 10 ICSE</h3>
         <img src="https://i.ibb.co/SX80CPdY/d072eda9-7927-4408-87da-626a907701cc.png" alt="DSYFS Logo" width="100" style="float:right; margin: 0 0 10px 10px;">
-        <p>We are proud to share that students associated with DSYFS are making exceptional progress in their Class 10 ICSE academics. Through collective motivation, study support, and unity, our members are achieving higher scores and improved learning habits in studies.</p>
-        <p>Our movement isn't just about activism—it's about growth, education, and empowerment. DSYFS stands not only for justice, but also for academic excellence. Together, we are rising!</p>
-        <p><strong>“Rise to the Future” isn't just our slogan—it's our reality!</strong></p>
+        <p>We’re proud to announce our members are achieving new academic heights in Class 10 ICSE. DSYFS isn’t just about unity and justice — it’s also about education, growth, and discipline.</p>
+        <p><strong>Rise with us. Rise to the future.</strong></p>
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>&copy; 2025 Democratic Students of Youth Federation of St. Michael's School (DSYFS)</p>
-    <b>OFFICIAL SITE <b>®</b></b><br>
-    <img src="https://i.ibb.co/SX80CPdY/d072eda9-7927-4408-87da-626a907701cc.png" alt="DSYFS Logo" style="width:200px; border-radius: 50%;">
-    <img src="https://i.ibb.co/F445q7vv/Chat-GPT-Image-May-16-2025-09-34-14-PM.png" alt="DSYFS Flag" style="width:100px;">
+    <div>
+      <img src="https://i.ibb.co/SX80CPdY/d072eda9-7927-4408-87da-626a907701cc.png" alt="DSYFS Logo" style="width:100px; border-radius:50%;">
+      <img src="https://i.ibb.co/F445q7vv/Chat-GPT-Image-May-16-2025-09-34-14-PM.png" alt="DSYFS Flag" style="width:100px;">
+    </div>
   </div>
+
 </body>
+
 </html>
+
